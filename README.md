@@ -42,7 +42,7 @@ This is a clone application for trello. This has been built for learning purpose
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/)
+1. [Node.js version >= 16](https://nodejs.org/)
 2. [npm](https://www.npmjs.com/)
 
 ## Steps to run this on your local
@@ -61,9 +61,7 @@ First install the MongoDB Compass for better visualization of data with MongoDB 
 
 Install docker on your machine and start it
 
-1. Create _.env.development_ file.
-2. Add `LOCAL_MONGODB=mongodb://mongodb:27017/trello`
-3. Run `docker-compose up`
+1. Run `docker-compose up -d`
 
 ## What's next 🚀
 
