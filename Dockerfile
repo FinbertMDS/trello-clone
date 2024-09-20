@@ -1,4 +1,8 @@
-FROM node:16-stretch-slim
+FROM node:16-alpine
+
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache make gcc g++ python3
 
 ENV PORT 3000
 
@@ -9,7 +13,7 @@ WORKDIR /usr/src/app/trello
 # Installing dependencies
 COPY package.json /usr/src/app/trello
 COPY yarn.lock /usr/src/app/trello
-
+    
 RUN yarn install
 
 # Copying source files
